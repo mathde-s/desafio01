@@ -12,7 +12,7 @@ public class Main {
         int pontuacao = 0;
 
         while (true) {
-            int numeroSorteado = 5 ;//random.nextInt(10);
+            int numeroSorteado = random.nextInt(10);
             System.out.println("bem vindo ao jogo de adivinhação! para continuar escolha um palpite.");
             int numeroEscolhido = scanner.nextInt();
 
