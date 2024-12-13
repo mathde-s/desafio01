@@ -16,7 +16,11 @@ public class Main {
 
         while (true) {
             int numeroSorteado = random.nextInt(10);
-            System.out.println("bem vindo ao jogo de adivinhação! para continuar escolha um palpite.");
+            System.out.println("bem vindo ao jogo de adivinhação!");
+            System.out.println("escolha um nivel de dificuldade: 1- fácil | 2-médio | 3- dificil");
+            int dificuldade = scanner.nextInt();
+            validaDificuldade(dificuldade);
+            System.out.println("digite um palpite");
             int numeroEscolhido = scanner.nextInt();
 
             while (!validaNumero(numeroEscolhido))
@@ -36,6 +40,14 @@ public class Main {
     static boolean validaNumero(int escolhido){
         if (escolhido < 0 || escolhido > 10){
             System.out.println("número inválido, escolha um número entre 0 a 10");
+            return false;
+        }
+        return true;
+    }
+
+    static boolean validaDificuldade(int dificuldade){
+        if (dificuldade != 1 && dificuldade != 2 && dificuldade != 3){
+            System.out.println("dificuldade inválida, escolha um número entre 1 a 3");
             return false;
         }
         return true;
