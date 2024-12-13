@@ -23,9 +23,12 @@ public class Main {
             System.out.println("digite um palpite");
             int numeroEscolhido = scanner.nextInt();
 
+            while (!validaDificuldade(dificuldade))
+                dificuldade = scanner.nextInt();
+
             while (!validaNumero(numeroEscolhido))
                 numeroEscolhido = scanner.nextInt();
-            pontuacao += pontuador(numeroEscolhido,numeroSorteado);
+            pontuacao += pontuador(numeroEscolhido,numeroSorteado, dificuldade);
             System.out.println("sua pontuação total é: "+pontuacao);
 
             System.out.println("uma nova rodada irá iniciar, para sair aperte 0 e para continuar aperte outro número");
@@ -52,7 +55,7 @@ public class Main {
         }
         return true;
     }
-    static int pontuador(int escolhido, int sorteado){
+    static int pontuador(int escolhido, int sorteado,int dificuldade){
         int pontos = 0;
 
         if(escolhido == sorteado)
