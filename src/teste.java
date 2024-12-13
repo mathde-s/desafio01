@@ -3,7 +3,7 @@ import java.util.Random;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Main {
+public class teste {
 
     static List<Integer> acertos = new ArrayList<>();
     static List<Integer> erros = new ArrayList<>();
@@ -71,6 +71,7 @@ public class Main {
     static int pontuador(int escolhido, int sorteado){
         int pontos = 0;
 
+
         if (escolhido == sorteado) {
             System.out.println("parabéns você acertou o número e ganhou 10 pontos");
             pontos += 10;
@@ -84,6 +85,7 @@ public class Main {
             System.out.println("o número sorteado era: " + sorteado);
             erros.add(escolhido);
         }
+
         return pontos;
     }
     static int sorteiaNumeroAleatorio(int dificuldade){
