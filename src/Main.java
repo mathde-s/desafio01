@@ -27,12 +27,12 @@ public class Main {
 
             while (!validaNumero(numeroEscolhido, dificuldade))
                 numeroEscolhido = scanner.nextInt();
-            pontuacao += pontuador(numeroEscolhido,numeroSorteado);
-            System.out.println("sua pontuação total é: "+pontuacao);
 
             System.out.println("uma nova rodada irá iniciar, para sair aperte 0 e para continuar aperte outro número");
             continua = scanner.nextInt();
             if (continua == 0) {
+                pontuacao += pontuador(numeroEscolhido,numeroSorteado);
+                System.out.println("sua pontuação total é: "+pontuacao);
                 System.out.println("números certos: "+ acertos);
                 System.out.println("números errados: "+ erros);
                 return;
