@@ -17,13 +17,12 @@ public class Main {
             System.out.println("bem vindo ao jogo de adivinhação!");
             System.out.println("escolha um nivel de dificuldade: 1- fácil | 2- médio | 3- dificil");
             int dificuldade = scanner.nextInt();
+            while (!validaDificuldade(dificuldade))
+                dificuldade = scanner.nextInt();
             int numeroSorteado = sorteiaNumeroAleatorio(dificuldade);
-            validaDificuldade(dificuldade);
             System.out.println("digite um palpite");
             int numeroEscolhido = scanner.nextInt();
 
-            while (!validaDificuldade(dificuldade))
-                dificuldade = scanner.nextInt();
 
             while (!validaNumero(numeroEscolhido, dificuldade))
                 numeroEscolhido = scanner.nextInt();
